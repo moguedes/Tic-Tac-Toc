@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <!-- Link CSS -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Beau+Rivage&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Add font -->
+    <link rel="shortcut icon" href="images/FaviconTicTacToe.png" type="image/x-icon">
+    <!-- Add favicon -->
+    <script
+      src="https://kit.fontawesome.com/cde30f483a.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Due to this script, I'm able to use arrows. -->
+    <title>Magno Guedes' Tic Tac Toe</title>
+    <!-- Document Title -->
+  </head>
+
+  <body>
+    <div id="result"></div>
+    <!--  Shows who won the round-->
+    <main id="game-container">
+      <!-- Includes the whole game content and the header.-->
+      <header>
+        <img src="images/coat of arms.png" alt="Guedes Coat of Arms" />
+        <!-- Logo -->
+        <h1>Tic Tac Toe</h1>
+        <!-- Game Title -->
+      </header>
+      <!-- Includes the game title and its "logo". -->
+      <div id="game-content">
+        <!-- Includes the whole game content -->
+        <div id="game">
+            <!-- Includes the whole game content, apart from players info. -->
+          <div id="game-actual-players">
+            <p>
+              Player 1: <span id="player1" style="text-transform: lowercase;"></span
+              ><i id="player-time-icon1" class=""></i>
+            </p>
+            <p>
+              Player 2: <span id="player2" style="text-transform: lowercase;"></span
+              ><i id="player-time-icon2" class=""></i>
+            </p>
+          </div>
+          <!-- Includes players' names and the arrows icons used to mark each players' turn. -->
+
+          <div class="stage">
+            <div>
+              <div id="0" class="square"></div>
+              <div id="1" class="square"></div>
+              <div id="2" class="square"></div>
+            </div>
+            <div>
+              <div id="3" class="square"></div>
+              <div id="4" class="square"></div>
+              <div id="5" class="square"></div>
+            </div>
+            <div>
+              <div id="6" class="square"></div>
+              <div id="7" class="square"></div>
+              <div id="8" class="square"></div>
+            </div>
+          </div>
+          <!-- Includes the game stage. -->
+        </div>
+
+        <div id="info">
+          <div id="info-players">
+            <label for="">Enter player 1 name:</label>
+            <input
+              type="text"
+              name=""
+              id="player-name-input1"
+              placeholder="Player 1"
+              maxlength="9"
+              style="text-transform: lowercase;"
+            />
+
+            <label for="" id="labelp2">Enter player 2 name:</label>
+            <input
+              type="text"
+              name=""
+              id="player-name-input2"
+              placeholder="Player 2"
+              maxlength="9"
+              style="text-transform: lowercase;"
+            />
+
+            <p id="error-msg">*Enter all players</p>
+
+            <button onclick="sendPlayersInfo()">Save and Start</button>
+          </div>
+          <!-- Includes inputs where players can type their names, an error mesage displayed when players don't type both names and the "save and start" button.-->
+          <div id="info-buttons">
+            <button onclick="resetMatch()">New Game</button>
+            <button id="restart" onclick="resetGame()">Erase Data</button>
+          </div>
+          <!-- Includes the buttons "new game" (used to reset match) and "erase data" (used to erase players' data). -->
+        </div>
+        <!-- Includes the players' infos. -->
+      </div>
+      <footer>
+        <div class="social-icons">
+          <div class="social-icons-images">
+            <a href="https://github.com/moguedes"><img class="img-social-icons" src="images/GitHub.png" alt="GitHubIcon"></a>
+            <a href="https://www.instagram.com/_magnoguedes/"><img class="img-social-icons" src="images/instagram.png" alt="Instagram"></a>
+            <div class="footer-text">
+              <h4>By Magno Otávio Guedes</h4>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <script src="scripts/game.js"></script>
+    <script src="scripts/interface.js"></script>
+    <!-- Links both JS scripts used in the game -->
+  </body>
+</html>
